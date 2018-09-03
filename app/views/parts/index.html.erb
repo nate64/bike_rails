@@ -1,6 +1,7 @@
 <h1>Parts</h1>
-<% @part.each do |part| %>
-  <h2><%= part.title %></h2>
-  <%= link_to 'Show Page', part_path(part) %>
-  <%= link_to 'New Page', new_part_path(part) %>
+<% @parts.each do |part| %>
+  <h2><%= part.name %></h2>  
+  <%= link_to 'New Part', new_part_path %>
+  <%= link_to 'Show Part', part_path(part) %>
+  <%= link_to 'Edit part', edit_part_path(part) %>
 <% end %>

@@ -26,6 +26,7 @@ class PartsController < ApplicationController
   end
 
   def edit
+    # @parts = Part.find(params[:id])
   end
 
   def update

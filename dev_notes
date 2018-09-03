@@ -1,0 +1,31 @@
+bundle exec rails g model part name:string color:string description:string manufacturer:string
+
+
+
+create
+edit gem
+bundle install
+git
+be rails g model thing column:value etc:etc
+cerate controller for part
+
+
+
+Issues:
+in index.html.erb I had part.title - but my model was part.name
+<h1>Parts</h1>
+<% @parts.each do |part| %>
+  <h2><%= part.name %></h2>  
+  <%= link_to 'Show Part', part_path(part) %>
+  <%= link_to 'New Part', new_part_path(part) %>
+<% end %>
+
+
+Also, in routes.rb I had resources :pages >> shoulda been resources :parts
+
+
+***for each added page functionality, change code in:
+  -complete edit method in controller
+  -edit page link in index.html.erb
+  -form to complete in edit.html.erb
+  -complete update method in pages controller

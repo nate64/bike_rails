@@ -27,7 +27,6 @@ class PartsController < ApplicationController
 
   def edit
     @parts = Part.find(params[:id])
-    #redirect parts_path(@part.id) # - doesn't like this
   end
 
   def update
@@ -41,6 +40,8 @@ class PartsController < ApplicationController
   end
 
   def destroy
+    Part.find(params[:id]).destroy
+    redirect_to parts_path
   end
 
   private

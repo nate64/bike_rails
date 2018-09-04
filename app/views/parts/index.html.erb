@@ -3,5 +3,7 @@
   <h2><%= part.name %></h2>  
   <%= link_to 'New Part', new_part_path %>
   <%= link_to 'Show Part', part_path(part) %>
-  <%= link_to 'Edit part', edit_part_path(part) %>
+  <%= link_to 'Edit Part', edit_part_path(part) %>
+  <%= link_to 'Destroy Part', part, method: :delete %>
+
 <% end %>
